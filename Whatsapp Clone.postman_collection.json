@@ -1,0 +1,840 @@
+{
+	"info": {
+		"_postman_id": "74661d1f-5180-40d9-8e66-1b758fb130fd",
+		"name": "Whatsapp Clone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27919474"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"Ranak Debnath\",\r\n\"email\":\"ranak.12008460@lpu.in\",\r\n\"password\":\"pass123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ranak.12008460@lpu.in\",\r\n    \"password\":\"pass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ranak.12008460@lpu.in\",\r\n    \"password\":\"pass123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "195"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c3-CLeCSgmRGJjAex3w1OG54c6yF9s\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 20:19:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY2MjE3ZmI3ZDUwOTY2ZmU1Yzg2MzIwIn0sImlhdCI6MTcxNzcwNTE1MywiZXhwIjoxNzE4MDY1MTUzfQ.mXkICNVFmqLxQ75_9sjTHZNxf3oyr9klTDQOitGZLYc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create_Group",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY2MjE3ZmI3ZDUwOTY2ZmU1Yzg2MzIwIn0sImlhdCI6MTcxNzcwNDkxMSwiZXhwIjoxNzE4MDY0OTExfQ.ECbTaHyBg0enArcwzMpex_4KB4fSWgic7u1GyXPkZl8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test_Group1\",\r\n    \"memberIds\": [\"666217fb7d50966fe5c86320\", \"6660c8a4452f66d4d683b0ee\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/groups/create/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"groups",
+						"create",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test_Group\",\r\n    \"memberIds\": [\"666217fb7d50966fe5c86320\", \"6660c8a4452f66d4d683b0ee\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/groups/create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"groups",
+								"create",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "167"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a7-bHvJmgY9E5WF+rtQrLxjuAG0xtU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 20:17:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Test_Group\",\n    \"members\": [\n        \"666217fb7d50966fe5c86320\",\n        \"6660c8a4452f66d4d683b0ee\"\n    ],\n    \"_id\": \"6662196c7d50966fe5c86326\",\n    \"createdAt\": \"2024-06-06T20:17:48.782Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "create_Group",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test_Group1\",\r\n    \"memberIds\": [\"666217fb7d50966fe5c86320\", \"6660c8a4452f66d4d683b0ee\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/groups/create/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"groups",
+								"create",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "195"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c3-JS8XcLSn/78KQ28zyyPVOpGr6ek\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 21:07:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Test_Group1\",\n    \"members\": [\n        \"666217fb7d50966fe5c86320\",\n        \"6660c8a4452f66d4d683b0ee\",\n        \"666217fb7d50966fe5c86320\"\n    ],\n    \"_id\": \"666224fddb042c0785388463\",\n    \"createdAt\": \"2024-06-06T21:07:09.425Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Rename Group",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY2MjE3ZmI3ZDUwOTY2ZmU1Yzg2MzIwIn0sImlhdCI6MTcxNzcwNTE1MywiZXhwIjoxNzE4MDY1MTUzfQ.mXkICNVFmqLxQ75_9sjTHZNxf3oyr9klTDQOitGZLYc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"groupId\":\"6662196c7d50966fe5c86326\",\r\n    \"newName\":\"Test_Group_Renamed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/groups/rename/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"groups",
+						"rename",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Rename Group",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groupId\":\"6662196c7d50966fe5c86326\",\r\n    \"newName\":\"Test_Group_Renamed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/groups/rename/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"groups",
+								"rename",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "175"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"af-un7OexE3TXINZjHexENFeFt/oqQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 20:21:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6662196c7d50966fe5c86326\",\n    \"name\": \"Test_Group_Renamed\",\n    \"members\": [\n        \"666217fb7d50966fe5c86320\",\n        \"6660c8a4452f66d4d683b0ee\"\n    ],\n    \"createdAt\": \"2024-06-06T20:17:48.782Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Group Message Send",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY2MjE3ZmI3ZDUwOTY2ZmU1Yzg2MzIwIn0sImlhdCI6MTcxNzcwODI3MywiZXhwIjoxNzE4MDY4MjczfQ.cpIs1SACjyqQsWGeJ71reAmNM7c9d_D0dq5qSHBpb0s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   // Example ObjectId for sender\r\n  \"content\": \"hello3\",\r\n  \"groupId\": \"666224fddb042c0785388463\" // Example ObjectId for group\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/messages/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"messages",
+						"send"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   // Example ObjectId for sender\r\n  \"content\": \"Your message content here\",\r\n  \"groupId\": \"666224fddb042c0785388463\" // Example ObjectId for group\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/messages/send",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"messages",
+								"send"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "190"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"be-JdpP8IYMBcnsp9b0WjKTsJ4tP+A\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 21:45:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"sender\": \"666217fb7d50966fe5c86320\",\n    \"content\": \"Your message content here\",\n    \"group\": \"666224fddb042c0785388463\",\n    \"_id\": \"66622df3f8a2b248d76268e2\",\n    \"createdAt\": \"2024-06-06T21:45:23.117Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Group Get_message",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY2MjE3ZmI3ZDUwOTY2ZmU1Yzg2MzIwIn0sImlhdCI6MTcxNzcwODI3MywiZXhwIjoxNzE4MDY4MjczfQ.cpIs1SACjyqQsWGeJ71reAmNM7c9d_D0dq5qSHBpb0s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/messages/666224fddb042c0785388463",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"messages",
+						"666224fddb042c0785388463"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/messages/666224fddb042c0785388463",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"messages",
+								"666224fddb042c0785388463"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "709"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c5-aaQPrjy5/5NwcfXR4erSL4GW+YE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 21:52:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"66622fa8f8a2b248d76268f4\",\n        \"sender\": \"666217fb7d50966fe5c86320\",\n        \"content\": \"hello3\",\n        \"group\": \"666224fddb042c0785388463\",\n        \"createdAt\": \"2024-06-06T21:52:40.531Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66622fa2f8a2b248d76268ef\",\n        \"sender\": \"666217fb7d50966fe5c86320\",\n        \"content\": \"hello2\",\n        \"group\": \"666224fddb042c0785388463\",\n        \"createdAt\": \"2024-06-06T21:52:34.266Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66622f9af8a2b248d76268ea\",\n        \"sender\": \"666217fb7d50966fe5c86320\",\n        \"content\": \"Yhello1\",\n        \"group\": \"666224fddb042c0785388463\",\n        \"createdAt\": \"2024-06-06T21:52:26.886Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66622df3f8a2b248d76268e2\",\n        \"sender\": \"666217fb7d50966fe5c86320\",\n        \"content\": \"Your message content here\",\n        \"group\": \"666224fddb042c0785388463\",\n        \"createdAt\": \"2024-06-06T21:45:23.117Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "sendIndividualMessage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY2MjE3ZmI3ZDUwOTY2ZmU1Yzg2MzIwIn0sImlhdCI6MTcxNzcwODI3MywiZXhwIjoxNzE4MDY4MjczfQ.cpIs1SACjyqQsWGeJ71reAmNM7c9d_D0dq5qSHBpb0s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reciverId\": \"6660c8a4452f66d4d683b0ee\",\r\n    \"content\": \"Hello, this is a 2nd test message from 666217fb7d50966fe5c86320.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/individual-messages/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"individual-messages",
+						"send"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sendIndividualMessage",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reciverId\": \"6660c8a4452f66d4d683b0ee\",\r\n    \"content\": \"Hello, this is a 2nd test message from 666217fb7d50966fe5c86320.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/individual-messages/send",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"individual-messages",
+								"send"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "232"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e8-qGCzjC3LjAourUSuLFD5lFeW7GM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 21:58:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"sender\": \"666217fb7d50966fe5c86320\",\n    \"receiver\": \"6660c8a4452f66d4d683b0ee\",\n    \"content\": \"Hello, this is a 2nd test message from 666217fb7d50966fe5c86320.\",\n    \"_id\": \"66623104f8a2b248d76268fc\",\n    \"createdAt\": \"2024-06-06T21:58:28.361Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "getIndividualMessage",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY2MjE3ZmI3ZDUwOTY2ZmU1Yzg2MzIwIn0sImlhdCI6MTcxNzcwODI3MywiZXhwIjoxNzE4MDY4MjczfQ.cpIs1SACjyqQsWGeJ71reAmNM7c9d_D0dq5qSHBpb0s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/individual-messages/6660c8a4452f66d4d683b0ee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"individual-messages",
+						"6660c8a4452f66d4d683b0ee"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getIndividualMessage",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/individual-messages/6660c8a4452f66d4d683b0ee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"individual-messages",
+								"6660c8a4452f66d4d683b0ee"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "463"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1cf-YjWOdtokFOY7fNvPeBuTUSWb+S4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 22:23:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"66623104f8a2b248d76268fc\",\n        \"sender\": \"666217fb7d50966fe5c86320\",\n        \"receiver\": \"6660c8a4452f66d4d683b0ee\",\n        \"content\": \"Hello, this is a 2nd test message from 666217fb7d50966fe5c86320.\",\n        \"createdAt\": \"2024-06-06T21:58:28.361Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"666230c8f8a2b248d76268f9\",\n        \"sender\": \"666217fb7d50966fe5c86320\",\n        \"receiver\": \"6660c8a4452f66d4d683b0ee\",\n        \"content\": \"Hello, this is a test message from 666217fb7d50966fe5c86320.\",\n        \"createdAt\": \"2024-06-06T21:57:28.990Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		}
+	]
+}
